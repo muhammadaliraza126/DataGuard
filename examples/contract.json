@@ -1,0 +1,1 @@
+{"columns":{"id":{"required":true,"unique":true},"amount":{"type":"number","required":true,"min":0,"max":100000},"kind":{"required":true,"allowed":["A","B"]}}}
