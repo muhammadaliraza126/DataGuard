@@ -15,4 +15,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: python -m unittest discover -s tests -v
+      - run: python -m pip install .
+      - run: dataguard --version
+      - run: dataguard examples/current.csv --contract examples/contract.json --baseline examples/baseline.csv --output-dir reports/installed
+      - run: python scripts/build_demo.py
+      - run: git diff --exit-code -- docs/index.html docs/clean-report.json docs/invalid-report.json
       - run: python dataguard.py examples/current.csv --contract examples/contract.json --baseline examples/baseline.csv --output-dir reports/demo

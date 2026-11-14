@@ -1,0 +1,86 @@
+{
+  "version": "0.1.0",
+  "status": "failed",
+  "row_count": 3,
+  "failures": [
+    {
+      "column": "id",
+      "check": "required",
+      "count": 1
+    },
+    {
+      "column": "id",
+      "check": "unique",
+      "count": 1
+    },
+    {
+      "column": "amount",
+      "check": "required",
+      "count": 1
+    },
+    {
+      "column": "amount",
+      "check": "type",
+      "count": 1
+    },
+    {
+      "column": "amount",
+      "check": "min",
+      "count": 1
+    },
+    {
+      "column": "kind",
+      "check": "allowed",
+      "count": 1
+    }
+  ],
+  "profile": {
+    "id": {
+      "blank_count": 1,
+      "distinct_nonblank": 1,
+      "numeric_count": 2,
+      "min": 1.0,
+      "max": 1.0,
+      "mean": 1.0
+    },
+    "amount": {
+      "blank_count": 1,
+      "distinct_nonblank": 2,
+      "numeric_count": 1,
+      "min": -1.0,
+      "max": -1.0,
+      "mean": -1.0
+    },
+    "kind": {
+      "blank_count": 0,
+      "distinct_nonblank": 3,
+      "numeric_count": 0
+    }
+  },
+  "comparison": {
+    "baseline_rows": 4,
+    "added_columns": [],
+    "removed_columns": [],
+    "columns": {
+      "amount": {
+        "blank_rate_change": 0.3333333333333333,
+        "total_variation": null,
+        "mean_change": -26.0,
+        "valid_numeric_counts": {
+          "current": 1,
+          "baseline": 4
+        }
+      },
+      "id": {
+        "blank_rate_change": 0.3333333333333333,
+        "total_variation": 0.75,
+        "mean_change": null
+      },
+      "kind": {
+        "blank_rate_change": 0.0,
+        "total_variation": 0.33333333333333337,
+        "mean_change": null
+      }
+    }
+  }
+}

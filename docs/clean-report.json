@@ -1,0 +1,55 @@
+{
+  "version": "0.1.0",
+  "status": "passed",
+  "row_count": 4,
+  "failures": [],
+  "profile": {
+    "id": {
+      "blank_count": 0,
+      "distinct_nonblank": 4,
+      "numeric_count": 4,
+      "min": 5.0,
+      "max": 8.0,
+      "mean": 6.5
+    },
+    "amount": {
+      "blank_count": 0,
+      "distinct_nonblank": 4,
+      "numeric_count": 4,
+      "min": 20.0,
+      "max": 50.0,
+      "mean": 35.0
+    },
+    "kind": {
+      "blank_count": 0,
+      "distinct_nonblank": 2,
+      "numeric_count": 0
+    }
+  },
+  "comparison": {
+    "baseline_rows": 4,
+    "added_columns": [],
+    "removed_columns": [],
+    "columns": {
+      "amount": {
+        "blank_rate_change": 0.0,
+        "total_variation": null,
+        "mean_change": 10.0,
+        "valid_numeric_counts": {
+          "current": 4,
+          "baseline": 4
+        }
+      },
+      "id": {
+        "blank_rate_change": 0.0,
+        "total_variation": 1.0,
+        "mean_change": null
+      },
+      "kind": {
+        "blank_rate_change": 0.0,
+        "total_variation": 0.25,
+        "mean_change": null
+      }
+    }
+  }
+}

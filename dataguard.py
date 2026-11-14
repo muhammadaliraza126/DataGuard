@@ -8,6 +8,8 @@ import math
 from pathlib import Path
 import statistics
 
+__version__ = '0.1.0'
+
 
 def read_csv(path):
     with Path(path).open(encoding='utf-8-sig', newline='') as stream:
@@ -106,7 +108,7 @@ def audit(path, contract, baseline=None):
             add(name, 'type', invalid)
             add(name, 'min', low)
             add(name, 'max', high)
-    report = {'version': '0.1.0', 'status': 'failed' if failures else 'passed', 'row_count': len(rows),
+    report = {'version': __version__, 'status': 'failed' if failures else 'passed', 'row_count': len(rows),
               'failures': failures, 'profile': profile(header, rows), 'comparison': None}
     if baseline:
         old_header, old = read_csv(baseline)
@@ -146,6 +148,7 @@ def render_html(report):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--version', action='version', version=f'DataGuard {__version__}')
     parser.add_argument('csv', type=Path)
     parser.add_argument('--contract', type=Path, required=True)
     parser.add_argument('--baseline', type=Path)

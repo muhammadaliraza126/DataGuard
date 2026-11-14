@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dataguard-csv"
+dynamic = ["version"]
+description = "Local CSV contracts, profiling and transparent dataset comparisons"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Muhammad Ali Raza"}]
+keywords = ["csv", "data-quality", "data-contracts", "validation", "profiling"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.scripts]
+dataguard = "dataguard:main"
+
+[project.urls]
+Repository = "https://github.com/muhammadaliraza126/DataGuard"
+Issues = "https://github.com/muhammadaliraza126/DataGuard/issues"
+Changelog = "https://github.com/muhammadaliraza126/DataGuard/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+py-modules = ["dataguard"]
+
+[tool.setuptools.dynamic]
+version = {attr = "dataguard.__version__"}
